@@ -1,7 +1,9 @@
 /*
  * Create a list that holds all of your cards
  */
-let cards = document.getElementsByClassName('card');
+let cards = Array.from(document.getElementsByClassName('card'));
+//Array.from generates an array from a Nodelist
+
 
 /*
  * Display the cards on the page
