@@ -11,7 +11,12 @@ function createArr() {
 }
 //icons array is made out of cards classNames strings
 
-
+function reAssign() {
+  shuffle(icons);
+  for (let i = 0; i < icons.length; i++) {
+    cards[i].className = icons[i];
+  }
+}
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
