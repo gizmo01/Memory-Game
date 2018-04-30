@@ -1,8 +1,15 @@
 /*
  * Create a list that holds all of your cards
  */
-let cards = Array.from(document.getElementsByClassName('card'));
-//Array.from generates an array from a Nodelist
+let cards = document.querySelectorAll('.card .fa');
+let icons = [];
+
+function createArr() {
+  for (let card of cards) {
+    icons.push(card.className);
+  }
+}
+//icons array is made out of cards classNames strings
 
 
 /*
