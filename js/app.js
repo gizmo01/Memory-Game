@@ -54,8 +54,12 @@ function shuffle(array) {
 document.addEventListener('click', function(event) {
   if (event.target.classList.contains('card')) {
     // Do something...
-    event.target.classList.toggle('show');
-    event.target.classList.toggle('open');
-    console.log(113);
+    showCard();
   }
 }, false);
+
+function showCard() {
+  event.target.classList.toggle('show');
+  event.target.classList.toggle('open');
+  addCardToList();
+}
