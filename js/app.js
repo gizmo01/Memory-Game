@@ -89,3 +89,11 @@ function lockedState() {
     openCards = []; //empties the Array containing the clicked cards
   }
 }
+
+function reHideCards() {
+  for (let openCard of openCards) {
+    openCard.classList.toggle('show');
+    openCard.classList.toggle('open');
+    openCards = []; //empties the Array containing the clicked cards
+  }
+}
