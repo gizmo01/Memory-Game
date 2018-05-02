@@ -63,3 +63,20 @@ function showCard() {
   event.target.classList.toggle('open');
   addCardToList();
 }
+
+openCards = [];
+
+function addCardToList() {
+  openCards.push(event.target);
+  if ((openCards.length == 2) && (openCards[0].innerHTML === openCards[1].innerHTML)) {
+    // console.log("spaziale");
+    lockedState();
+    moveCounter();
+  } else if (((openCards.length == 2) && (openCards[0].innerHTML !== openCards[1].innerHTML))) {
+    setTimeout(reHideCards, 1000);
+    moveCounter();
+  }
+  if (document.getElementsByClassName('match').length > 6) {
+    setTimeout(finalScore, 500);
+  }
+}
