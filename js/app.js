@@ -97,3 +97,11 @@ function reHideCards() {
     openCards = []; //empties the Array containing the clicked cards
   }
 }
+
+let numberOfMoves = Number(document.querySelector('.moves').innerText);
+
+function moveCounter() {
+  numberOfMoves += 1;
+  document.querySelector('.moves').innerText = numberOfMoves;
+}
+//increases the counter by 1 at each move
