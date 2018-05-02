@@ -80,3 +80,12 @@ function addCardToList() {
     setTimeout(finalScore, 500);
   }
 }
+
+function lockedState() {
+  for (let openCard of openCards) {
+    openCard.classList.toggle('show');
+    openCard.classList.toggle('open');
+    openCard.classList.add('match');
+    openCards = []; //empties the Array containing the clicked cards
+  }
+}
