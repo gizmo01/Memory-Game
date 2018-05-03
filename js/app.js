@@ -57,10 +57,14 @@ function shuffle(array) {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('card')) {
-    // Do something...
-    showCard();
+  if (event.target.classList.contains('open')) {
+    event.preventDefault();
+    //prevents the matching of the same card with itself
+  } else if (event.target.classList.contains('card')) {
+    showCard(event);
+    addCardToList(event);
   }
+
 }, false);
 
 function showCard(event) {
