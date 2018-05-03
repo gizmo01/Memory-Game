@@ -63,15 +63,15 @@ document.addEventListener('click', function(event) {
   }
 }, false);
 
-function showCard() {
+function showCard(event) {
   event.target.classList.toggle('show');
   event.target.classList.toggle('open');
-  addCardToList();
+  addCardToList(event);
 }
 
 openCards = [];
 
-function addCardToList() {
+function addCardToList(event) {
   openCards.push(event.target);
   if ((openCards.length == 2) && (openCards[0].innerHTML === openCards[1].innerHTML)) {
     // console.log("spaziale");
