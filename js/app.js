@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  createArr()
+  reAssign();
+});
+
 /*
  * Create a list that holds all of your cards
  */
@@ -76,7 +81,7 @@ function addCardToList() {
     setTimeout(reHideCards, 1000);
     moveCounter();
   }
-  if (document.getElementsByClassName('match').length > 6) {
+  if (document.getElementsByClassName('match').length > 16) {
     setTimeout(finalScore, 500);
   }
 }
