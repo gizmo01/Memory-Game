@@ -16,11 +16,19 @@ function createArr() {
 }
 //icons array is made out of cards classNames strings
 
+let clearCards = document.getElementsByClassName('card');
+
 function reAssign() {
   shuffle(icons);
   for (let i = 0; i < icons.length; i++) {
     cards[i].className = icons[i];
   }
+  for (let clearCard of clearCards) {
+    clearCard.classList.remove('match');
+    //hide all the cards again at each new game start
+  }
+  numberOfMoves = 0;
+  document.querySelector('.moves').innerText = numberOfMoves;
 }
 /*
  * Display the cards on the page
@@ -70,7 +78,6 @@ document.addEventListener('click', function(event) {
 function showCard(event) {
   event.target.classList.toggle('show');
   event.target.classList.toggle('open');
-  addCardToList(event);
 }
 
 openCards = [];
