@@ -118,3 +118,13 @@ function moveCounter() {
   document.querySelector('.moves').innerText = numberOfMoves;
 }
 //increases the counter by 1 at each move
+function finalScore() {
+  if (confirm(`
+    CONGRATULATIONS!
+    YOU HAVE WON THE GAME WITH ${numberOfMoves} MOVES!
+
+    WANNA PLAY AGAIN?`)) {
+    reAssign();
+  }
+
+};
