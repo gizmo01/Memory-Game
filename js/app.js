@@ -72,7 +72,6 @@ document.addEventListener('click', function(event) {
     showCard(event);
     addCardToList(event);
   }
-
 }, false);
 
 function showCard(event) {
@@ -84,7 +83,6 @@ openCards = [];
 function addCardToList(event) {
   openCards.push(event.target);
   if ((openCards.length == 2) && (openCards[0].innerHTML === openCards[1].innerHTML)) {
-    // console.log("spaziale");
     lockedState();
     moveCounter();
   } else if (((openCards.length == 2) && (openCards[0].innerHTML !== openCards[1].innerHTML))) {
