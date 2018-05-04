@@ -76,8 +76,7 @@ document.addEventListener('click', function(event) {
 }, false);
 
 function showCard(event) {
-  event.target.classList.toggle('show');
-  event.target.classList.toggle('open');
+  event.target.classList.add('show', 'open');
 }
 
 openCards = [];
@@ -92,15 +91,14 @@ function addCardToList(event) {
     setTimeout(reHideCards, 1000);
     moveCounter();
   }
-  if (document.getElementsByClassName('match').length > 16) {
+  if (document.getElementsByClassName('match').length == 16) {
     setTimeout(finalScore, 500);
   }
 }
 
 function lockedState() {
   for (let openCard of openCards) {
-    openCard.classList.toggle('show');
-    openCard.classList.toggle('open');
+    openCard.classList.remove('show', 'open');
     openCard.classList.add('match');
     openCards = []; //empties the Array containing the clicked cards
   }
@@ -108,8 +106,7 @@ function lockedState() {
 
 function reHideCards() {
   for (let openCard of openCards) {
-    openCard.classList.toggle('show');
-    openCard.classList.toggle('open');
+    openCard.classList.remove('show', 'open');
     openCards = []; //empties the Array containing the clicked cards
   }
 }
