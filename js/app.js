@@ -141,7 +141,7 @@ function moveCounter() {
 function finalScore() {
   if (confirm(`
     CONGRATULATIONS!
-    YOU HAVE WON THE GAME WITH ${numberOfMoves} MOVES!
+    YOU WON THE GAME IN ${--startingTime} SECONDS, WITH ${totalStars.childElementCount} STARS!
 
     WANNA PLAY AGAIN?`)) {
     reAssign();
