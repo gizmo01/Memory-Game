@@ -34,6 +34,10 @@ function reAssign() {
   startingTime = 0;
   document.querySelector('.seconds').innerText = startingTime;
   //clears the timer
+  totalStars.append(arrStar[0]);
+  totalStars.append(arrStar[1]);
+  //re-add the missing stars
+  openCards = [];
 }
 /*
  * Display the cards on the page
@@ -115,12 +119,21 @@ function reHideCards() {
 }
 
 let numberOfMoves = Number(document.querySelector('.moves').innerText);
+let totalStars = document.querySelector('.stars');
+let arrStar = document.querySelectorAll('.stars li');
 
 function moveCounter() {
-  numberOfMoves += 1;
+  numberOfMoves++;
   document.querySelector('.moves').innerText = numberOfMoves;
+  if (numberOfMoves == 20) {
+    arrStar[0].remove();
+  }
+  if (numberOfMoves == 30) {
+    arrStar[1].remove();
+  }
 }
 //increases the counter by 1 at each move
+
 function finalScore() {
   if (confirm(`
     CONGRATULATIONS!
