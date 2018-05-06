@@ -29,6 +29,11 @@ function reAssign() {
   }
   numberOfMoves = 0;
   document.querySelector('.moves').innerText = numberOfMoves;
+  //clears the number of moves
+  clearTimeout(t);
+  startingTime = 0;
+  document.querySelector('.seconds').innerText = startingTime;
+  //clears the timer
 }
 /*
  * Display the cards on the page
@@ -126,3 +131,12 @@ function finalScore() {
   }
 
 };
+
+let startingTime = 0;
+let t;
+
+function timer() {
+  document.querySelector('.seconds').innerText = startingTime;
+  startingTime++;
+  t = setTimeout(timer, 1000);
+}
