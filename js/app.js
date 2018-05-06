@@ -24,7 +24,7 @@ function reAssign() {
     cards[i].className = icons[i];
   }
   for (let clearCard of clearCards) {
-    clearCard.classList.remove('match');
+    clearCard.classList.remove('match', 'open', 'show');
     //hide all the cards again at each new game start
   }
   numberOfMoves = 0;
@@ -78,6 +78,9 @@ document.addEventListener('click', function(event) {
     event.preventDefault();
     //prevents the matching of the same card with itself
   } else if (event.target.classList.contains('card')) {
+    if (startingTime == 0) {
+      timer(); //timer starts at first card click
+    }
     showCard(event);
     addCardToList(event);
   }
