@@ -98,10 +98,11 @@ function addCardToList(event) {
     lockedState();
     moveCounter();
   } else if (((openCards.length == 2) && (openCards[0].innerHTML !== openCards[1].innerHTML))) {
-    setTimeout(reHideCards, 1000);
+    setTimeout(reHideCards, 500);
     moveCounter();
   }
   if (document.getElementsByClassName('match').length == 16) {
+    clearTimeout(t);
     setTimeout(finalScore, 500);
   }
 }
