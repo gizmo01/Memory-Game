@@ -11,7 +11,7 @@
 * Goal is to convert the static project into an interative App game.
 * Modifying HTML, CSS but basically the JavaScript file.
 
-## PLay it!
+## Play it!
 
 Play the [game](https://gizmo01.github.io/Memory-Game/).
 
