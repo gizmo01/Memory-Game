@@ -2,19 +2,30 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* Build a browser-based, feature-packed card matching game (Project 3).
+* Created for the Udacity Nanodegree Front End Web Developer- (Full Google Scholarship).
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+* Students are given a Udacity startercode(HTML and CSS styling) of the static Memory Game project.
+* Goal is to convert the static project into an interative App game.
+* Modifying HTML, CSS but basically the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Play it!
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Play the [game](https://gizmo01.github.io/Memory-Game/).
+
+## Game Logics
+
+* The game randomly shuffles the 16 cards.
+* A user wins once all cards have successfully been matched (8pairs).
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+No pull requests are accepted.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Further improvements 
+
+* Add CSS animations when cards are clicked, unsuccessfully matched, and successfully matched.
+* Add unique functionality beyond the minimum requirements (Implement a leaderboard, store game state using local storage, etc.)
+* Implement additional optimizations that improve the performance and user experience of the game (keyboard shortcuts for gameplay, etc).
